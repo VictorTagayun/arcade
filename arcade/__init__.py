@@ -22,3 +22,4 @@ from arcade.version import *
 from arcade.window_commands import *
 from arcade.physics_engine_2d import *
 from arcade.joysticks import *
+from arcade.game import Game
