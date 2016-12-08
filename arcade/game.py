@@ -21,8 +21,8 @@ from arcade.draw_commands import draw_ellipse_filled, draw_text
 
 
 class GameWindow(pyglet.window.Window):
-    def __init__(self, app, width: int = 400, height: int = 400):
-        super().__init__(width, height)
+    def __init__(self, app, width: int = 400, height: int = 400, caption: str = None):
+        super().__init__(width, height, caption=caption)
         self.app = app
         rate = 1 / 800
         pyglet.clock.schedule_interval(self.animate, rate)
@@ -46,8 +46,8 @@ class GameWindow(pyglet.window.Window):
 
 
 class Game:
-    def __init__(self, width: int = 400, height: int = 400):
-        self._window = GameWindow(self, width=width, height=height)
+    def __init__(self, width: int = 400, height: int = 400, caption: str = None):
+        self._window = GameWindow(self, width=width, height=height, caption=caption)
         self.show_fps: bool = False
 
     def set_update_rate(self, rate: float):

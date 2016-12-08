@@ -54,3 +54,5 @@ To Do
 - Investigate making ``arcade.Game`` into an abstract base class
 
 - Use inspection to see if you should pass in key_modifiers
+
+- Make it optional to pass in window height/width/title

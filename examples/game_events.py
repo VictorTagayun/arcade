@@ -12,11 +12,11 @@ BALL_RADIUS = 20
 
 
 class MyGame(Game):
-    def __init__(self, width, height, title):
-        super().__init__(width=width, height=height)
+    def __init__(self, width, height, caption):
+        super().__init__(width=width, height=height, caption=caption)
         self.height = height
         self.width = width
-        self.title = title
+        self.caption = caption
         self.set_background_color(BLUE_GREEN)
         self.ball_x_position = BALL_RADIUS
         self.velocity = 70
