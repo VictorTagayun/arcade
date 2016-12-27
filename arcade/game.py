@@ -48,7 +48,7 @@ class GameWindow(pyglet.window.Window):
 class Game:
     def __init__(self, width: int = 400, height: int = 400, caption: str = None):
         self._window = GameWindow(self, width=width, height=height, caption=caption)
-        self.show_fps: bool = False
+        self.show_fps = False
 
     def set_update_rate(self, rate: float):
         pyglet.clock.schedule_interval(self._window.animate, rate)
